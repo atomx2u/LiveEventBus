@@ -10,7 +10,7 @@ In your root `build.gradle`:
 
 ```groovy
 repositories {
-    ...
+    // ...
     maven { url "https://jitpack.io" }
 }
 ```
@@ -19,7 +19,7 @@ In your module `build.gradle`
 
 ```groovy
 dependencies {
-    ...
+    // ...
     implementation 'com.github.atomx2u:liveeventbus:0.1'
 }
 ```
