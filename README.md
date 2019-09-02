@@ -10,7 +10,7 @@ In your root `build.gradle`:
 
 ```groovy
 repositories {
-		...
+    ...
     maven { url "https://jitpack.io" }
 }
 ```
@@ -19,8 +19,8 @@ In your module `build.gradle`
 
 ```groovy
 dependencies {
-  	...
-		implementation 'com.github.jitpack:gradle-simple:1.0'
+    ...
+    implementation 'com.github.atomx2u:liveeventbus:0.1'
 }
 ```
 
@@ -36,7 +36,7 @@ class YourEvent(val msg: Any) : LiveEventBus.Event
 
 ```kotlin
 LiveEventBus.with(YourEvent::class).observe(lifecycleOwner = this) { changed ->
-		TODO("Your code")
+    TODO("Your code")
 }
 ```
 
@@ -44,18 +44,17 @@ LiveEventBus.with(YourEvent::class).observe(lifecycleOwner = this) { changed ->
 
 ```kotlin
 LiveEventBus.with(YourEvent::class).emit(
-		YourEvent(Any())
+    YourEvent(Any())
 )
 ```
 
 #### Advanced usage
 
-** Sticky event **
+**Sticky event**
 
-```
-LiveEventBus.with(YourEvent::class)
-		.observe(lifecycleOwner = this, sticky = true) { changed ->
-				TODO("Your code")
-		}
+```kotlin
+LiveEventBus.with(YourEvent::class).observe(lifecycleOwner = this, sticky = true) { changed ->
+    TODO("Your code")
+}
 ```
 
