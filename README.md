@@ -2,6 +2,8 @@
 
 An Android event bus based on LiveData without reflection.
 
+[![](https://jitpack.io/v/atomx2u/liveeventbus.svg)](https://jitpack.io/#atomx2u/liveeventbus)
+
 Compared with traditional LiveData eventbus implementation using reflection API, this library just uses simple plain LiveData API to achive stick feature. And also, this library is null-safety and thread-safety.
 
 ## Getting Start
@@ -48,7 +50,7 @@ LiveEventBus.with(YourEvent::class).emit(
 )
 ```
 
-#### Advanced usage
+## Advanced usage
 
 **Sticky event**
 
